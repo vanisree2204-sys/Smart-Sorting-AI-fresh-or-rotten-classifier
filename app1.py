@@ -143,20 +143,28 @@ st.markdown('''
 
 # Classes
 CLASS_NAMES = [
-    'Apple_healthy', 'Apple_rotten', 'Banana_healthy', 'Banana_rotten',
-    'Bell_pepper_healthy', 'Bell_pepper_rotten', 'Carrot_healthy', 'Carrot_rotten',
-    'Cucumber_healthy', 'Cucumber_rotten', 'Grapes_healthy', 'Grapes_rotten',
-    'Lemon_healthy', 'Lemon_rotten', 'Mango_healthy', 'Mango_rotten',
-    'Orange_healthy', 'Orange_rotten', 'Potato_healthy', 'Potato_rotten',
-    'Strawberry_healthy', 'Strawberry_rotten', 'Tomato_healthy', 'Tomato_rotten',
-    'Watermelon_healthy', 'Watermelon_rotten', 'Onion_healthy', 'Onion_rotten'
+    'Apple_Healthy', 'Apple_Rotten',
+    'Banana_Healthy', 'Banana_Rotten',
+    'Bellpepper_Healthy', 'Bellpepper_Rotten',
+    'Carrot_Healthy', 'Carrot_Rotten',
+    'Cucumber_Healthy', 'Cucumber_Rotten',
+    'Grape_Healthy', 'Grape_Rotten',
+    'Guava_Healthy', 'Guava_Rotten',
+    'Jujube_Healthy', 'Jujube_Rotten',
+    'Mango_Healthy', 'Mango_Rotten',
+    'Orange_Healthy', 'Orange_Rotten',
+    'Pomegranate_Healthy', 'Pomegranate_Rotten',
+    'Potato_Healthy', 'Potato_Rotten',
+    'Strawberry_Healthy', 'Strawberry_Rotten',
+    'Tomato_Healthy', 'Tomato_Rotten'
 ]
+
 
 # Load model
 @st.cache_resource
 def load_model_from_file():
     try:
-        return load_model("fruitveg_model.h5", compile=False)
+        return load_model(r"C:\Users\gunav\Downloads\fruitveg_model.h5", compile=False)
     except Exception as e:
         st.error(f"❌ Failed to load model: {e}")
         return None
