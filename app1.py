@@ -202,7 +202,8 @@ with st.container():
 
 # Prediction output
 if uploaded_file is not None:
-    st.image(uploaded_file, caption='📸 Uploaded Image', use_container_width=True)
+    st.image(uploaded_file, caption='📸 Uploaded Image', width=700)  # or any width you like
+
     if model:
         result = predict_image(uploaded_file)
         if result:
