@@ -156,7 +156,7 @@ CLASS_NAMES = [
 @st.cache_resource
 def load_model_from_file():
     try:
-        return load_model(r"C:\Users\gunav\Downloads\fruitveg_model.h5", compile=False)
+        return load_model("fruitveg_model.h5", compile=False)
     except Exception as e:
         st.error(f"❌ Failed to load model: {e}")
         return None
